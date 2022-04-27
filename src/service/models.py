@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from .validators import correct_filtering_fields
+from .validators import correct_filtering_fields, correct_number_phone
 
 
 class Mailing(models.Model):
@@ -19,7 +19,8 @@ class Mailing(models.Model):
 
 class Client(models.Model):
     """Модель Клиент с полями"""
-    number_of_phone = models.IntegerField(verbose_name='Номер телефона')
+    number_of_phone = models.IntegerField(validators = [correct_number_phone], 
+                                          verbose_name='Номер телефона')
     mobile_operator_code = models.IntegerField(verbose_name='Код оператора')
     tag = models.CharField(max_length=20, verbose_name='Тег')
     time_zone = models.CharField(default=timezone.now, max_length=4,

@@ -12,7 +12,7 @@
 В качестве брокера очередей сообщений в проекте используется Reddis
 
 #### Как запустить преокт:
-1. Клонировать проект по ссылке https://gitlab.com/AV_Shumilov/fabv
+1. Клонировать проект по ссылке https://github.com/ShumilovAlexandr/Sending_to_the_server
 2. Создать и активировать виртуальное окружение командами python -m venv venv, . venv/bin/activate
 3. Установить зависимости из файла requirements.txt: python -m pip install --upgrade pip,
 pip install -r requirements.txt
